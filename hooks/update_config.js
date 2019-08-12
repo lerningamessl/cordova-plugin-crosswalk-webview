@@ -13,16 +13,15 @@ module.exports = function(context) {
     }
 
     /** @external */
-    var fs = context.requireCordovaModule('fs'),
-        path = context.requireCordovaModule('path'),
-        et = context.requireCordovaModule('elementtree');
+    var fs = require('fs'),
+        path = require('path'),
+        et = require('elementtree');
 
     /** @defaults */
     var xwalkVariables = {},
         argumentsString = context.cmdLine,
         pluginConfigurationFile = path.join(context.opts.plugin.dir, 'plugin.xml'),
         androidPlatformDir = path.join(context.opts.projectRoot,
-            'platforms', 'android'),
         projectConfigurationFile = path.join(context.opts.projectRoot,
             'config.xml'),
         platformConfigurationFile,
