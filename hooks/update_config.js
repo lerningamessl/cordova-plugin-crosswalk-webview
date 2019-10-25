@@ -22,7 +22,7 @@ module.exports = function(context) {
         argumentsString = context.cmdLine,
         pluginConfigurationFile = path.join(context.opts.plugin.dir, 'plugin.xml'),
         androidPlatformDir = path.join(context.opts.projectRoot,
-            'platforms', 'android'),
+            'platforms', 'android'), 
         projectConfigurationFile = path.join(context.opts.projectRoot,
             'config.xml'),
         platformConfigurationFile,
